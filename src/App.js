@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './Components/Home-element/Home';
+import AddIncome from './Components/pop-elements/AddIncome';
+import AddExpense from './Components/pop-elements/AddExpense';
+import EditExp from './Components/pop-elements/EditExp';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+    <Routes>
+      <Route path='/' element={<Home />}/>
+      <Route path='/add-bal' element={<AddIncome />}/>
+      <Route path='/add-exp' element={<AddExpense />}/>
+      <Route path = '/edit-exp' element={<EditExp />}/>
+    </Routes>
+     
     </div>
   );
 }
